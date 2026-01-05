@@ -53,16 +53,16 @@ def upscale(img, size):
     return up
 
 
-size = 2048
+size = 1024
 logo = upscale(logo_src, size)
 profile_sq = center_crop_face(profile_src)
 
 # Bigger bubble, no shadow
-bubble_d = int(size * 0.25)
+bubble_d = int(size * 0.35)
 bubble = make_bubble_no_shadow(profile_sq, bubble_d)
 
 out = logo.copy()
-margin = int(size * 0.11)
+margin = int(size * 0.01)
 x = margin
 y = size - bubble.size[1] - margin
 
